@@ -1,0 +1,2 @@
+// test_sphere.csg  -  singola sfera (verifica sdPrimitive base)
+sphere(r = 2);

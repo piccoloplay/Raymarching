@@ -1,0 +1,9 @@
+// test_cone.csg  -  cono troncato (cylinder con r1 != r2): nuovo type=3
+// Sopra un disco-base, sotto una piccola cima.
+union() {
+    color([0.85, 0.85, 0.40])
+    cylinder(r1 = 2, r2 = 0.5, h = 3, center = true);
+
+    translate([0, 0, 1.7])
+        color([0.30, 0.30, 0.30]) sphere(r = 0.6);
+}

@@ -1,0 +1,86 @@
+/* ============================================================
+   style.css - layout minimale per il raymarcher fullscreen.
+   ============================================================ */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #111;
+    color: #ddd;
+    font-family: 'JetBrains Mono', Consolas, monospace;
+    overflow: hidden;
+}
+
+canvas#webgl {
+    display: block;
+    width:  100vw;
+    height: 100vh;
+}
+
+#hud {
+    position: absolute;
+    top:  8px;
+    left: 10px;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 8px 10px;
+    border-radius: 5px;
+    line-height: 1.55;
+    min-width: 220px;
+}
+
+#hud strong  { color: #f3f4f6; }
+#fps         { color: #9ca3af; }
+#status      { color: #cbd5e1; }
+
+#hud .row {
+    margin: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#sceneSelect {
+    flex: 1;
+    background: #1f2937;
+    color: #f3f4f6;
+    border: 1px solid #374151;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+#sceneSelect:hover { border-color: #6b7280; }
+
+#loadCsgBtn {
+    background: #2563eb;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    padding: 3px 9px;
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+#loadCsgBtn:hover { background: #1d4ed8; }
+
+/* il vero <input type=file> sta nascosto; usiamo il bottone */
+#csgFileInput { display: none; }
+
+#hud label {
+    cursor: pointer;
+    user-select: none;
+    color: #f3f4f6;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+#hud .hint {
+    color: #6b7280;
+    font-size: 10px;
+}
+#testCubePos {
+    font-size: 11px;
+}

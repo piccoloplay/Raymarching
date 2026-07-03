@@ -1,0 +1,9 @@
+// test_union.csg  -  union di una sfera e un cubo, traslati
+union() {
+    translate([-1.2, 0, 0]) {
+        color([0.85, 0.35, 0.35]) sphere(r = 1.2);
+    }
+    translate([0.6, -0.6, -0.6]) {
+        color([0.30, 0.55, 0.85]) cube(size = 1.2, center = false);
+    }
+}

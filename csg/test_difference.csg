@@ -1,0 +1,5 @@
+// test_difference.csg  -  sfera con un cilindro forato attraverso
+difference() {
+    color([0.85, 0.70, 0.30]) sphere(r = 2);
+    cylinder(r = 0.8, h = 6, center = true);
+}
