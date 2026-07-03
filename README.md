@@ -57,21 +57,3 @@ Renderer real-time in **WebGL 2** che disegna scene **CSG** con il **ray marchin
 └── csg/                      modelli .csg esportati da OpenSCAD
 ```
 
-## Esecuzione in locale
-
-Il progetto è interamente lato client, ma va servito da un **server HTTP statico** (l'autoload dei `.csg` usa `fetch`, bloccato aprendo `index.html` con `file://`). Per esempio:
-
-```bash
-python -m http.server 8000
-# poi apri http://localhost:8000
-```
-
-Su **GitHub Pages** funziona senza configurazione.
-
-## Requisiti
-
-Un browser con supporto **WebGL 2** (Chrome, Firefox, Edge recenti).
-
-## Contesto
-
-Progetto per l'esame di **Computer Graphics** (UNIFI). Il ray marching e le SDF seguono i riferimenti classici di Jamie Wong e Inigo Quilez; i modelli sono costruiti in OpenSCAD con sole primitive e operazioni booleane.
